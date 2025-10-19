@@ -1,0 +1,19 @@
+html {
+  --vaadin-input-field-border-radius: var(--vaadin-radius-s);
+  --vaadin-input-field-container-gap: var(--vaadin-gap-s);
+  --vaadin-input-field-required-indicator-color: #DD5500;
+}
+
+::part(input-field) {
+  --vaadin-focus-ring-width: 3px;
+  --vaadin-focus-ring-color: oklch(from var(--aura-accent-color) l c h / 0.5);
+  --aura-surface-opacity: 1;
+}
+
+[focus-ring]::part(input-field) {
+  --vaadin-input-field-border-color: var(--aura-accent-color);
+}
+
+[theme~="helper-above-field"]::part(helper-text) {
+  margin-top: calc(var(--vaadin-gap-s) * -1);
+}

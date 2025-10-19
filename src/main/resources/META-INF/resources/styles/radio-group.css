@@ -1,0 +1,52 @@
+html {
+  --vaadin-radio-group-gap: var(--vaadin-gap-s);
+}
+
+/* grouped-container variant */
+
+vaadin-radio-group.grouped-container {
+  background: transparent;
+  --aura-surface-level: -1.5;
+  --aura-surface-opacity: 1;
+}
+
+vaadin-radio-group.grouped-container::part(group-field) {
+  padding: var(--vaadin-padding-s);
+  background: var(--aura-surface);
+  border-radius: var(--vaadin-radius-m);
+}
+
+/* button-row variant */
+
+vaadin-radio-group.button-row::part(group-field) {
+  flex-direction: row;
+  gap: var(--vaadin-gap-xs);
+}
+
+vaadin-radio-group.button-row vaadin-radio-button {
+  background: var(--aura-surface) padding-box;
+  border: 1px solid var(--vaadin-border-color);
+  border-radius: var(--vaadin-radius-m);
+  position: relative;
+  gap: 0;
+  flex: 1;
+}
+
+vaadin-radio-group.button-row vaadin-radio-button::part(radio) {
+  position: absolute;
+  top: var(--vaadin-padding-xs);
+  inset-inline-start: var(--vaadin-padding-xs);
+}
+
+vaadin-radio-group.button-row vaadin-radio-button div {
+  display: grid;
+  justify-items: center;
+  gap: var(--vaadin-gap-xs);
+  padding: var(--vaadin-padding-s) var(--vaadin-padding-m);
+}
+
+vaadin-radio-group.button-row vaadin-radio-button[checked] {
+  background: var(--aura-surface-solid);
+  border-color: var(--aura-accent-color);
+  --vaadin-radio-button-label-color: var(--aura-accent-text);
+}

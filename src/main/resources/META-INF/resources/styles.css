@@ -1,0 +1,22 @@
+@import "aura/aura.css";
+@import "./styles/button.css";
+@import "./styles/input-fields.css";
+@import "./styles/radio-group.css";
+
+html {
+  --pine-brand-color: #009c5b;
+  --aura-accent-light: var(--pine-brand-color);
+  --aura-accent-dark: var(--pine-brand-color);
+  --aura-background-light: oklch(from var(--pine-brand-color) 0.95 0.01 h);
+  --aura-base-size: 20;
+}
+
+#outlet {
+  align-content: center;
+}
+
+.form {
+  max-width: 40ch;
+  margin: auto;
+  --vaadin-vertical-layout-gap: var(--vaadin-gap-xl);
+}

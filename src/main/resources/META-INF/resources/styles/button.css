@@ -1,0 +1,12 @@
+vaadin-button {
+  --vaadin-button-padding: var(--vaadin-padding-s) var(--vaadin-padding-l);
+  --vaadin-button-border-radius: calc(0.5lh + var(--vaadin-padding-s));
+  --vaadin-button-border-width: 0px;
+  --aura-accent-light: var(--pine-brand-color);
+  box-shadow: none;
+}
+
+vaadin-button:not([theme~="primary"], [theme~="tertiary"]) {
+  --aura-surface-level: -1.5;
+  --aura-surface-opacity: 1;
+}
